@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 06</title>
+</head>
+<body>
+    <h1>Condicionais parte 1</h1>
+    <a href="ex005.html">Exercício 05</a>
+    <a href="ex007.html">Exercício 07</a>
+    <p>Sistema de multas</p>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById("txtvel");
+            var res = window.document.querySelector("div#res");
+            var vel = Number(txtv.value);
+            res.innerHTML = `<p>Sua velocidade atual é de ${vel} km/h</p>`;
+            if (vel > 80) {
+                res.innerHTML += `<p>Você excedeu o limite de velocidade. Foi multado</p>`;
+            }else {
+                res.innerHTML += `<p>Você está no limite de velocidade. Continue assim</p>`;
+            }
+            res.innerHTML += `<p>Dirija com cinto de segurança</p>`;
+        }
+    </script>
+    <br>
+    Em que país você mora: <input type="text" name="pais" id="txtpais">
+    <input type="button" value="Checar" onclick="conferir()">
+    <div id="res2"></div>
+    <script>
+        function conferir() {
+            var txtp = window.document.getElementById("txtpais");
+            var res2 = window.document.querySelector("div#res2");
+            var pa = txtp.value;
+            if (pa == "brasil"){
+                res2.innerHTML = `<p>Você é Brasileiro</p>`;
+            }else {
+                res2.innerHTML = `<p>Você é estrangeiro</p>`;
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    <h1>Aula 06</h1>
+<a href="ex002.html">Aula 05</a>
+<a href="ex004.html">Aula 07</a>
+<br><br>
+<script>
+    var nome = window.prompt("Qual é o seu nome?");
+    var n1 = Number.parseInt(window.prompt("Digite um número"));
+    var n2 = Number.parseInt(window.prompt("Outro número"));
+    var n3 = Number.parseFloat(window.prompt("Digite um número ponto flutuante"));
+    var n4 = Number(window.prompt("Qualquer número"));
+    var sal = Number.parseFloat(window.prompt("Digite um salário"));
+    window.alert(`É um grande prazer em te conhecer, ${nome} !`);
+    var s = n1 + n2;
+    var z = n3 + n4;
+    window.alert(`A soma é ${s}`);
+    window.alert(`A segunda soma é ${z}`);
+    document.write(`Seu nome tem ${nome.length} letras<br>`);
+    document.write(`Seu nome em maiúscula:  ${nome.toUpperCase()}<br>`);
+    document.write(`Seu nome em minúscula: ${nome.toLowerCase()}<br>`);
+    document.write(`O salário é de R$ ${sal.toFixed(2).replace(".",",")}<br>`);
+    document.write(`Corrigindo: ${sal.toLocaleString("pt-br", {style: "currency", currency:  "BRL"})}<br>`);
+</script>
+</body>
+</html>

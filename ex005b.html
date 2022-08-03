@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 05-B</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background-color: rgb(16, 68, 51);
+            color:azure;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+        div#zone {
+            font: normal 20pt Arial;
+            background-color: rgb(16, 68, 51);
+            color:azure;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eventos DOM - Outra forma</h1>
+    <a href="ex005.html">Voltar</a>
+    <div id="zone">
+        Interaja...
+    </div>
+    <script>
+        var b = window.document.getElementById("zone");
+        b.addEventListener("click", clicar);
+        b.addEventListener("mouseenter", entrar);
+        b.addEventListener("mouseout", sair);
+        
+        function clicar(){
+            b.innerText="Clicou!";
+            b.style.background="orange";
+        }
+        function entrar(){
+            b.innerText="Entrou!";
+            b.style.background="green"
+        }
+        function sair(){
+            b.innerText="Saiu";
+            b.style.background="blue"
+        }
+    </script>
+</body>
+</html>

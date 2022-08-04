@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 12</title>
+</head>
+<body>
+    <h1>Introdução a objetos</h1>
+    <a href="ex011.html">Exercício 11</a>
+    <br><br>
+    <script>
+        /*
+        para declarar um objeto, faz uma array com chaves
+        objetos, não guardam só valores, mas funções e métodos
+        */
+        let amigo = {
+        nome:"José", sexo:"m", peso:84.5, engordar(p=0){
+        document.write(`Engordou`);
+        this.peso += p;
+    }
+};
+document.write("<br>");
+document.write(typeof amigo);
+document.write("<br><br>");
+amigo.engordar(2);
+document.write("<br><br>");
+document.write(`${amigo.nome} pesa ${amigo.peso} kgs`);
+document.write("<br>");
+
+
+    </script>
+</body>
+</html>
